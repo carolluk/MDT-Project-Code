@@ -1,0 +1,340 @@
+<html>
+	<head>
+		<title>Register</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="{{STATIC_URL}}css/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{STATIC_URL}}css/style2.css" />
+                <!--[if lte IE 9]><link rel="stylesheet" href="{{STATIC_URL}}css/ie/v9.css" /><![endif]-->
+                <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+                        <script src="{{STATIC_URL}}js/jquery-1.11.2.min.js"></script>
+                        <script src="{{STATIC_URL}}js/jquery.min.js"></script>
+<style>
+div#One
+{
+   display:inline;
+   cursor: pointer;
+}
+div#Two{
+   display:inline;
+}
+div#Three
+{
+   display:inline;
+}
+div#Four
+{
+   display:inline;
+}
+div#Five
+{
+   display:inline;
+}
+div#Six
+{
+   display:inline;
+}
+
+</style>
+</head>
+
+
+<script type="text/javascript">
+//$(
+function Sleep() {
+    $('#container').highcharts({
+        title: {
+            text: 'Jawbone Data recent sleep',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: {{sleepDate}} 
+		//['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                //'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'Time Slept'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'milsecs'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Sleep',
+            //data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            data: {{sleepDuration}}
+        }]
+    });
+}
+function Steps() {
+    $('#container').highcharts({
+        title: {
+            text: 'Jawbone Data Recent Steps',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: {{moves_date}}
+                //['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                //'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: '# Steps'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'steps'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Steps',
+            //data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            data: {{steps}}
+        }]
+    });
+}
+
+
+function Distance() {
+    $('#container').highcharts({
+        title: {
+            text: 'Jawbone Data Recent Distance',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: {{moves_date}}
+                //['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                //'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'KM'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'steps'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Distance',
+            //data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            data: {{mykm}}
+        }]
+    });
+}
+
+
+function Act() {
+    $('#container').highcharts({
+        title: {
+            text: 'Jawbone Data Recent Activity',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: {{moves_date}}
+                //['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                //'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'time active'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'active time'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Time Active',
+            //data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            data: {{time_active}}
+        }]
+    });
+}
+
+
+
+function Cals() {
+    $('#container').highcharts({
+        title: {
+            text: 'Jawbone Data Recent Calories Spent',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: {{moves_date}}
+                //['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                //'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: '# Calories'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'calories'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Calories',
+            //data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            data: {{calories}}
+        }]
+    });
+}
+
+</script>
+           
+	<body class="landing">
+		<!--menu -->
+		<header id="header" class="alt">
+			<nav id="nav">
+     			 <ul>
+       			 <li class="special">
+        		     <a href="#" class="menuToggle"><span>Menu</span></a>
+        	       	<div id="menu">
+        		      <ul>
+      			              <li><a href="/">Home</a></li>
+      			              <li><a href="/team">Team</a></li>
+     			              <li><a href="/about">About</a></li>
+     			              <li><a href="/signup">Sign Up</a></li>
+    			              <li><a href="/login">Log In</a></li>
+  		              </ul>
+               		 </div>
+       			 </li>
+    			 </ul>
+			 </nav>
+			</header>
+	
+					<!-- Successful Login Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>Conects Me</h2>
+							<p>Log In Successful<br />
+							</p>
+							<ul class="actions">
+								<li><a href="https://jawbone.com/auth/oauth2/auth/?scope=extended_read sleep_read location_read mood_read move_read generic_event_read&client_id=GnHK7CopBDI&redirect_uri=http://conects.me/conected/c&response_type=code" class="button special">Register your Jawbone</a></li>
+								<li><a href={{auth_url}} class="button special">Register your Fitbit</a></li>
+							</ul>
+						</div>
+						<a href="#one" class="more scrolly">Personal Dashboard</a>
+					</section>
+					<!-- Dashboard -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>DASHBOARD</a></h2><br />
+								<h3>Your personal Jawbone home page</h3>
+								{% if  firstname %}
+								    <h1>Welcome {{ firstname }} {{ lastname }}</h1>
+								    <h1>Your current height is {{ height }} meters</h1>
+							 	    <h1>Your current weight is {{ weight }} kilos</h1>
+								    <!--<h1>{{sleepDuration}}</h1>
+                                                                    <h1>{{sleepDate}}</h1>-->
+								{% else %}
+								    <p></p>
+								{% endif %}
+
+								<p> <div id="One"><div id="Two" onclick="Sleep()">Sleep |</div><div id="Three" onclick="Steps()"> Steps |</div><div id="Four" onclick="Act()"> Time Active |</div><div id="Five" onclick="Cals()"> Calories |</div><div id="Six" onclick="Distance()"> Distance |</div></div>
+									<br />
+								</p>
+                                                        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+							<!--<div id="containerb" style="min-width: 310px; height: 400px; margin: 0 auto"></div>-->
+							</header>
+							<div id="chartcontainer"></div>
+							<ul class="icons major">
+								<li><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
+								<li><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
+								<li><span class="icon fa-code major style3"><span class="label">Dolor</span></span></li>
+							</ul>
+						</div>
+					</section>
+
+                        <script src="{{STATIC_URL}}js/jquery-1.11.2.min.js"></script>
+                        <script src="{{STATIC_URL}}js/jquery.min.js"></script>
+                        <script src="{{STATIC_URL}}js/jquery.scrollex.min.js"></script>
+                        <script src="{{STATIC_URL}}js/jquery.scrolly.min.js"></script>
+                        <script src="{{STATIC_URL}}js/skel.min.js"></script>
+                        <script src="{{STATIC_URL}}js/init.js"></script>
+                        <script src="{{STATIC_URL}}js/highcharts.js"></script>
+                        <script src="{{STATIC_URL}}js/exporting.js"></script>
+
+
+	<body>
+	<div="one">
+	</body>
+
+</html>

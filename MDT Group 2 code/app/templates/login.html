@@ -1,0 +1,49 @@
+<html>
+<head> 
+<link rel="stylesheet" href="{{STATIC_URL}}css/style2.css" />
+<body>
+ <header id="header" class="alt">
+                                                <h1><a href="index1.html">Spectral</a></h1>
+                                                <nav id="nav">
+                                                        <ul>
+                                                                <li class="special">
+                                                                        <a href="#" class="menuToggle"><span>Menu</span></a>
+                                                                        <div id="menu">
+                                                                                <ul>
+                                                                                        <li><a href="/">Home</a></li>
+                                                                                        <li><a href="/team">Team</a></li>
+                                                                                        <li><a href="/about">About</a></li>
+                                                                                        <li><a href="/signup">Sign Up</a></li>
+                                                                                        <li><a href="/login">Log In</a></li>
+                                                                                </ul>
+                                                                        </div>
+                                                                </li>
+                                                        </ul>
+                                                </nav>
+                                        </header>
+
+
+<h1>This is the login Page</h1>
+<!-- Hash username and password withpytho tage and pass hashesi via parameters-->
+<form action="logsucess">
+User name:<br>
+<input type="text" name="username" width= >
+<br>
+Password:<br>
+<input type="password" name="passw">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+<br><br>
+<a href="../signup">Clikc Here to sign up for Account</a>
+
+<!-- Scripts -->
+                        <script src="{{STATIC_URL}}js/jquery.min.js"></script>
+                        <script src="{{STATIC_URL}}js/jquery.scrollex.min.js"></script>
+                        <script src="{{STATIC_URL}}js/jquery.scrolly.min.js"></script>
+                        <script src="{{STATIC_URL}}js/skel.min.js"></script>
+                        <script src="{{STATIC_URL}}js/init.js"></script>
+
+</body>
+</head>
+</html>

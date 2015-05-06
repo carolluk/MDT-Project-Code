@@ -1,0 +1,20 @@
+
+<html>
+<title>Hi</title>
+<head></head>
+<body>
+<p>Working</p>
+</body>
+</body>
+
+{% if  devices_list %}
+    <ul>
+    {% for d in devices_list %}
+        <li>{{ d.device_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+</html>
